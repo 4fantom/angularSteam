@@ -1,0 +1,11 @@
+{
+  "targets": {
+    "final-project-angular-app": {
+      "hosting": {
+        "finalProject": [
+          "final-project-angular-app"
+        ]
+      }
+    }
+  }
+}

@@ -1,0 +1,25 @@
+header {
+  display: flex;
+  align-items: center;
+  height: 60px;
+  padding: 8px 20px;
+  box-shadow: 0 4px 10px 0 rgba(0, 0, 0, 0.2)
+}
+
+
+#logo{
+  height: 40px;
+  width: 40px;
+}
+
+.nav-link{
+  text-decoration: none;
+  margin: 20px;
+  font-family: Roboto,sans-serif;
+  font-size: 1.4em;
+  color: black;
+}
+
+nav a.active {
+  color: #6C69FF;
+}

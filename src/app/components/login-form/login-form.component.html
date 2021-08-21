@@ -1,0 +1,16 @@
+<div class="login-page">
+  <h1 class="form-header">Sign in</h1>
+  <div class="form">
+    <form class="login-form" [formGroup]="loginForm">
+      <label for="emailInput">Email</label>
+      <input formControlName="email" type="text" placeholder="Email" id="emailInput" name="email" />
+      <label for="passwordInput">Password</label>
+      <input formControlName="password" type="password" placeholder="Password" id="passwordInput" name="password" />
+      <button (click)="login()">Sign in</button>
+      <span class="text-danger"
+            *ngIf="(submitted)">
+        Wrong inputs
+      </span>
+    </form>
+      </div>
+</div>
