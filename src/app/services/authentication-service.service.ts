@@ -4,6 +4,7 @@ import 'rxjs/add/operator/switchMap';
 import { AngularFireAuth } from "@angular/fire/auth"
 import {BehaviorSubject, Observable} from "rxjs";
 import {AngularFireDatabase, AngularFireList} from "@angular/fire/database";
+import {first} from "rxjs/operators";
 
 @Injectable()
 export class AuthService implements OnInit{
@@ -28,7 +29,7 @@ export class AuthService implements OnInit{
         console.log('successfully signed up!', res);
       })
       .catch(error => {
-        console.log('Something is wrong:', error.message);
+        console.log('User is already exists');
       });
   }
 
@@ -41,6 +42,12 @@ export class AuthService implements OnInit{
       .catch(err => {
         console.log('Something went wrong: ', err.message);
       });
+  }
+
+  saveUserInfo(info){
+    console.log(info.toString())
+    //const usersRef: AngularFireList<any> = this.afDb.list('users');
+    //   usersRef.update('1', { username: 'newSize' });
   }
 
   private initUsers(afDb) {

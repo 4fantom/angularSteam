@@ -1,5 +1,78 @@
 .page-header{
   font-family: "Roboto", sans-serif;
   text-align: left;
-  margin-left: 30px;
+  margin: 30px 50px;
+}
+
+.games-wrapper {
+  display: flex;
+  justify-content: space-between;
+  margin: 0px 50px;
+  flex-wrap: wrap;
+  min-width: 90%;
+  max-width: 90%;
+
+}
+
+.games-card{
+  width: 300px;
+  border: 1px solid lightblue;
+  border-radius: 5px;
+  margin: inherit;
+}
+
+.card-title{
+  padding: 0;
+  font-size: 1.5em;
+}
+
+.card-header{
+  height: 180px;
+  background: #BDBCFF;
+  color: white;
+  padding: 10px;
+  flex-direction: column;
+  display: flex;
+  justify-content: space-between;
+}
+
+.card-price{
+  font-size: 1.3em;
+}
+
+.card-button{
+  outline: 0;
+  background: #6C69FF;
+  border: 0;
+  color: white;
+  cursor: pointer;
+  width: 100px;
+  height: 40px;
+  padding: 2px;
+  font-size: medium;
+  margin: 10px 20px;
+
+  border-radius: 10px;
+
+}
+
+.card-button-light{
+  outline: 0;
+  background: white;
+  border: 0;
+  color: #6C69FF;
+  cursor: pointer;
+  width: 100px;
+  height: 40px;
+  padding: 2px;
+  font-size: medium;
+  margin: 10px 20px;
+
+  border-radius: 10px;
+
+}
+.card-text{
+  max-height: 100px;
+  min-height: 100px;
+  overflow: hidden;
 }

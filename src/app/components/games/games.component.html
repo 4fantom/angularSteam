@@ -7,4 +7,51 @@
       <button>Search</button>
     </div>
   </form>
+  <div class="main-content">
+    <div class="games-wrapper">
+      <div *ngFor="let game of gamesArrFiltered" class="games-card">
+        <div class="card-header">
+          <p class="card-title">{{game.title}}</p>
+          <p class="card-price">{{game.price}}</p>
+        </div>
+        <div class="card-text">
+          <p>{{game.description}}</p>
+        </div>
+        <button (click)="addToLibrary(game.id)" class="card-button">Add to library</button>
+      </div>
+    </div>
+    <div class="filter-wrapper">
+      <p>Filter by price</p>
+      <mat-slider
+        [thumbLabel]
+        [min]="10"
+        [max]="400"
+        [step]="20"
+        [value]="firstSliderValue"
+        [displayWith]="formatThumbLabel"
+        (change)="onSliderChange($event)"
+      >
+      </mat-slider>
+      <p>Max price is {{currentSliderValue}}</p>
+      <p>Filter by tag</p>
+      <div class="checkboxes-wrapper">
+        <mat-checkbox class="example-margin"
+                      (change)="checkBox('indie')"
+                      [checked]=indieChecked>
+          Indie
+        </mat-checkbox>
+        <mat-checkbox class="example-margin"
+                      (change)="checkBox('action')"
+                      [checked]=actionChecked>
+          Action
+        </mat-checkbox>
+        <mat-checkbox class="example-margin"
+                      (change)="checkBox('adventure')"
+                      [checked]=adventureChecked>
+          Adventure
+        </mat-checkbox>
+      </div>
+    </div>
+  </div>
+
 </div>

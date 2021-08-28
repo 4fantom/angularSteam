@@ -6,6 +6,10 @@
       <input type="text" placeholder="Search Friends" id="searchInput"/>
       <button>Search</button>
     </div>
-
   </form>
+  <ul class="friends-list">
+    <li  *ngFor="let friend of friendsArr" class="list-line">{{friend.email}}
+    <button (click)="removeFriend()">Remove friend</button>
+    </li>
+  </ul>
 </div>

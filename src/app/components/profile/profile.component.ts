@@ -10,7 +10,7 @@ import { AuthService } from "../../services/authentication-service.service";
 export class ProfileComponent implements OnInit {
 
 
-  constructor(  ) {
+  constructor( private authService: AuthService  ) {
 
   }
 
@@ -37,6 +37,11 @@ export class ProfileComponent implements OnInit {
     } else{
       return ''
     }
+  }
+
+  saveInfo(){
+    console.log('save')
+    this.authService.saveUserInfo({sd:'sd'})
   }
   ngOnInit(): void {
   }

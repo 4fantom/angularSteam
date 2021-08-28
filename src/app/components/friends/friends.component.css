@@ -60,3 +60,34 @@
 .input-wrapper{
   display: flex;
 }
+
+.list-line{
+  display: flex;
+  width: 90%;
+  align-items: center;
+  margin: 10px auto;
+  justify-content: space-between;
+  border-radius: 10px;
+  box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.24);
+  padding: 2px;
+
+}
+.friends-list button {
+  font-family: "Roboto", sans-serif;
+  outline: 0;
+  background: #6C69FF;
+  border: 0;
+  color: white;
+  cursor: pointer;
+  height: 40px;
+  padding: 2px;
+  font-size: medium;
+  margin-left: 20px;
+  border-radius: 10px;
+  width: 150px;
+}
+
+.friends-list{
+  width: 90%;
+
+}
