@@ -1,5 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import { Observable } from "rxjs";
 import { AuthService } from "../../services/authentication-service.service";
 
 @Component({
@@ -7,8 +6,8 @@ import { AuthService } from "../../services/authentication-service.service";
   templateUrl: './profile.component.html',
   styleUrls: ['./profile.component.css']
 })
-export class ProfileComponent implements OnInit {
 
+export class ProfileComponent implements OnInit {
 
   constructor( private authService: AuthService  ) {
 
@@ -22,6 +21,7 @@ export class ProfileComponent implements OnInit {
       return ''
     }
   }
+
   getAge(){
     if (localStorage.getItem('user') !== null) {
       let user=JSON.parse(localStorage.getItem('user'));
@@ -30,6 +30,7 @@ export class ProfileComponent implements OnInit {
       return ''
     }
   }
+
   getEmail(){
     if (localStorage.getItem('user') !== null) {
       let user=JSON.parse(localStorage.getItem('user'));
@@ -40,9 +41,9 @@ export class ProfileComponent implements OnInit {
   }
 
   saveInfo(){
-    console.log('save')
-    this.authService.saveUserInfo({sd:'sd'})
+    this.authService.saveUserInfo()
   }
+
   ngOnInit(): void {
   }
 

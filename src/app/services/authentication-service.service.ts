@@ -13,7 +13,7 @@ export class AuthService implements OnInit{
   constructor(
     private afAuth: AngularFireAuth,
     private router: Router,
-    afDb: AngularFireDatabase,
+    private afDb: AngularFireDatabase,
   ) {
     this.initUsers(afDb);
   }
@@ -44,10 +44,11 @@ export class AuthService implements OnInit{
       });
   }
 
-  saveUserInfo(info){
-    console.log(info.toString())
-    //const usersRef: AngularFireList<any> = this.afDb.list('users');
-    //   usersRef.update('1', { username: 'newSize' });
+  saveUserInfo(){
+    alert('save user info')
+    // let user=JSON.parse(localStorage.getItem('user'));
+    // const usersRef: AngularFireList<any> = this.afDb.list('users');
+    //  usersRef.update(user.id, { username: 'update' });
   }
 
   private initUsers(afDb) {

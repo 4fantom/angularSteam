@@ -1,10 +1,8 @@
 import {Component, OnInit} from '@angular/core';
 import {FormGroup, FormBuilder, Validators} from '@angular/forms';
 import {AuthService} from "../../services/authentication-service.service";
-import {AngularFireDatabase, AngularFireList} from "@angular/fire/database";
-import {Observable, Subscription} from "rxjs";
 import {UsersService} from "../../services/users.service";
-import {GamesService} from "../../services/games.service";
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-login-form',
@@ -19,7 +17,8 @@ export class LoginFormComponent implements OnInit {
 
   constructor(private fb: FormBuilder,
               private authService: AuthService,
-              private service: UsersService) {
+              private service: UsersService,
+              private router: Router) {
     this.createForm();
   }
 
@@ -49,6 +48,7 @@ export class LoginFormComponent implements OnInit {
         this.loginForm.value.email,
         this.loginForm.value.password
       );
+      this.router.navigate(['/user/profile'])
     } else {
       alert('wrong input');
     }

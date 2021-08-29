@@ -10,6 +10,8 @@ import {SharedModule} from "../../../shared/shared.module";
 import {BrowserAnimationsModule} from "@angular/platform-browser/animations";
 import {MatSliderModule} from '@angular/material/slider';
 import { MatCheckboxModule } from '@angular/material/checkbox';
+import {FormsModule} from "@angular/forms";
+import { ReactiveFormsModule } from '@angular/forms'
 
 @NgModule({
   declarations: [
@@ -25,7 +27,9 @@ import { MatCheckboxModule } from '@angular/material/checkbox';
     SharedModule,
     BrowserAnimationsModule,
     MatSliderModule,
-    MatCheckboxModule
+    MatCheckboxModule,
+    FormsModule,
+    ReactiveFormsModule
   ]
 })
 export class DefaultModule {

@@ -35,4 +35,7 @@ export class FriendsComponent implements OnInit {
   removeFriend(){
     alert('remove friend')
   }
+  searchFriend(){
+    alert('search friend')
+  }
 }

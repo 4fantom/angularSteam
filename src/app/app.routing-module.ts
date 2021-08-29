@@ -11,7 +11,17 @@ import {FullscreenComponent} from "./components/layouts/fullscreen/fullscreen.co
 
 const appRoutes:Routes=[
   {
-    path: '',
+    path: 'auth',
+    component: FullscreenComponent,
+    children: [
+      {
+        path: 'login',
+        component: LoginFormComponent,
+      }
+    ],
+  },
+  {
+    path: 'user',
     component: DefaultComponent,
     children: [{
       path: 'games',
@@ -29,14 +39,8 @@ const appRoutes:Routes=[
   },
   {
     path: '',
-    component: FullscreenComponent,
-    children: [
-      {
-        path: 'login',
-        component: LoginFormComponent
-      }
-    ]
   }
+
 ]
 
 
@@ -50,6 +54,7 @@ const appRoutes:Routes=[
 export class AppRoutingModule {
 
 }
+
 export const routingComponents=[LoginFormComponent,
   ProfileComponent,
   GamesComponent,
